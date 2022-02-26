@@ -11,6 +11,7 @@ const firebaseConfig = {
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 const sendMessageForm = document.getElementById("send_message_form");
+const send_message_btn = document.getElementById("send_message");
 
 sendMessageForm.addEventListener('change', function () {
     if (sendMessageForm.name.value === "") {
@@ -73,3 +74,5 @@ function send_message() {
         message.classList.add('boder_red');
     }
 }
+
+send_message_btn.addEventListener('click',send_message());
