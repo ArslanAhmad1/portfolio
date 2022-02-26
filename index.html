@@ -1208,7 +1208,7 @@
                             </div>
                             <div class="right">
                                 <div class="fields">
-                                    <form action="/" onsubmit="sendEmail()" method="post" class="contact_form"
+                                    <form action="/" onsubmit="sendEmail()" id="send_message_form" method="post" class="contact_form"
                                         id="contact_form" autocomplete="off">
                                         <div class="returnmessage"
                                             data-success="Your message has been received, We will contact you soon.">
@@ -1229,7 +1229,7 @@
                                             <textarea id="message" placeholder="Your message here"></textarea>
                                         </div>
                                         <div class="iknow_tm_button">
-                                            <button id="send_message" href="#">Submit Now</button>
+                                            <button type="submit" id="send_message" >Submit Now</button>
                                         </div>
                                     </form>
                                 </div>
@@ -1264,6 +1264,9 @@
     <script src="js/plugins.js"></script>
     <script src="js/init.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <script src="js/script.js"></script>
 </body>
 
