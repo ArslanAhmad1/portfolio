@@ -18,22 +18,22 @@ sendMessageForm.addEventListener('change', function () {
     } else {
         sendMessageForm.name.classList.remove('boder_red');
     }
-    if (loginForm.email.value === "") {
+    if (sendMessageForm.email.value === "") {
         sendMessageForm.email.classList.add('boder_red');
     } else {
         sendMessageForm.email.classList.remove('boder_red');
     }
-    if (loginForm.phone.value === "") {
+    if (sendMessageForm.phone.value === "") {
         sendMessageForm.phone.classList.add('boder_red');
     } else {
         sendMessageForm.phone.classList.remove('boder_red');
     }
-    if (loginForm.subject.value === "") {
+    if (sendMessageForm.subject.value === "") {
         sendMessageForm.subject.classList.add('boder_red');
     } else {
         sendMessageForm.subject.classList.remove('boder_red');
     }
-    if (loginForm.message.value === "") {
+    if (sendMessageForm.message.value === "") {
         sendMessageForm.message.classList.add('boder_red');
     } else {
         sendMessageForm.message.classList.remove('boder_red');

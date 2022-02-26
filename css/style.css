@@ -6357,7 +6357,7 @@ input[type="number"] {
 }
 
 .boder_red{
-  border: red 1px solid;
+  border: red 1px solid !important;
 }
 .boder_remove{
   bottom: 1px solid rgba(255,255,255,.15);
