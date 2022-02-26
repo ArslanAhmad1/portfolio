@@ -10,7 +10,7 @@ const firebaseConfig = {
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
-const sendMessageForm = document.getElementById("send_message_form");
+const sendMessageForm = document.getElementById("sendMessageForm");
 const send_message_btn = document.getElementById("send_message");
 
 sendMessageForm.addEventListener('change', function () {
