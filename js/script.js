@@ -18,25 +18,21 @@ sendMessageForm.addEventListener('change', function () {
     } else {
         sendMessageForm.name.classList.remove('boder_red');
     }
-
     if (loginForm.email.value === "") {
         sendMessageForm.email.classList.add('boder_red');
     } else {
         sendMessageForm.email.classList.remove('boder_red');
     }
-
     if (loginForm.phone.value === "") {
         sendMessageForm.phone.classList.add('boder_red');
     } else {
         sendMessageForm.phone.classList.remove('boder_red');
     }
-
     if (loginForm.subject.value === "") {
         sendMessageForm.subject.classList.add('boder_red');
     } else {
         sendMessageForm.subject.classList.remove('boder_red');
     }
-
     if (loginForm.message.value === "") {
         sendMessageForm.message.classList.add('boder_red');
     } else {
@@ -61,18 +57,19 @@ function send_message() {
     } if (message.value === "") {
         message.classList.add('boder_red');
     }
-
-    db.collection("contact").add({
-        name,
-        email,
-        phone,
-        subject,
-        message
-    })
-        .then((docRef) => {
-            alert("Successfully Submitted..!");
-        })
-        .catch((error) => {
-            alert("Error..!");
-        });
+    if (name.value != "" && email.value != "" && phone.value != "" && subject.value != "", message.value != "") {
+        db.collection("contact").add({ name, email, phone, subject, message })
+            .then((docRef) => {
+                alert("Successfully Submitted..!");
+            })
+            .catch((error) => {
+                alert("Error..!");
+            });
+    } else {
+        name.classList.add('boder_red');
+        email.classList.add('boder_red');
+        phone.classList.add('boder_red');
+        subject.classList.add('boder_red');
+        message.classList.add('boder_red');
+    }
 }
